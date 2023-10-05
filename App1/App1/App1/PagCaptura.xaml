@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.PagCaptura">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="indicador" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Orange"/>
+            <Button x:Name="btnGuardar" Text="Guardar"/>
+            <ListView x:Name="lista" RowHeight="-1" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="Red" Text="{Binding Tipo}" FontSize="Large" WidthRequest="50" VerticalOptions="Center" />
+                                <Label TextColor="Black" Text="{Binding Nombre}" FontSize="Large" WidthRequest="300" VerticalOptions="Center"/>
+                                <Entry Text="{Binding Importe}" FontSize="Large" WidthRequest="100"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrls="clr-namespace:App1.controles"
+             Padding="10"
+             x:Class="App1.PagEmpleado">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Apellido paterno" />
+            <Entry x:Name="txtApePat"/>
+            <Label Text="Apellido materno" />
+            <Entry x:Name="txtApeMat"/>
+            <Label Text="Nombre" />
+            <Entry x:Name="txtNom"/>
+            <Label Text="Puesto" />
+            <Entry x:Name="txtPuesto"/>
+            <Label Text="Sueldo" />
+            <Entry x:Name="txtSueldo"/>
+            <Label Text="Fecha Ingreso" />
+            <DatePicker x:Name="txtFechaIng"/>
+            <ctrls:Boton x:Name="btnOk" Text="Guardar" />
+            <ActivityIndicator x:Name="indicador" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

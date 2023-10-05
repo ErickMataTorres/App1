@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="10"
+             x:Class="App1.PagLogin">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtRfc" Placeholder="R.F.C."/>
+            <Entry x:Name="txtPwd" Placeholder="Contraseña" IsPassword="True"/>
+            <Button x:Name="btnLogin" Text="Iniciar sesion" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="2" CornerRadius="10" />
+            <Button x:Name="btnRegistro" Text="Registrar empresa" />
+            <ActivityIndicator x:Name="indicador" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="10"
+             xmlns:ctrls="clr-namespace:App1.controles"
+             x:Class="App1.PagRegistro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Nombre"/>
+                <ctrls:CajaTexto x:Name="txtNom" />
+                <Label Text="R.F.C."/>
+                <ctrls:CajaTexto x:Name="txtRfc"/>
+                <Label Text="Registro IMSS"/>
+                <ctrls:CajaTexto x:Name="txtRegImss" Mayusculas="False"/>
+                <Label Text="Regimen"/>
+                <Picker x:Name="pkrReg"/>
+                <Label Text="Periodicidad de pago"/>
+                <Picker x:Name="pkrPer"/>
+                <Label Text="Contraseña" />
+                <ctrls:CajaTexto x:Name="txtPwd" IsPassword="True"/>
+                <Label Text="Repite contraseña" />
+                <ctrls:CajaTexto x:Name="txtPwdB" IsPassword="True"/>
+                <Button x:Name="btnOk" Text="Aceptar" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

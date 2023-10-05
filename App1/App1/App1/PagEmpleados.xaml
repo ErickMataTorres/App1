@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrls="clr-namespace:App1.controles"
+             Padding="10"
+             x:Class="App1.PagEmpleados">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="txtFiltro" FontSize="Large"></SearchBar>
+                <ctrls:Boton x:Name="btnNuevo" Image="mas" WidthRequest="50" />
+            </StackLayout>
+            <ActivityIndicator x:Name="indicador" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Orange"/>
+            <ListView x:Name="lista" RowHeight="-1" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label TextColor="Black" Text="Id"></Label>
+                                    <Label TextColor="Red" Text="{Binding Id}"></Label>
+                                    <Label TextColor="Black" Text="{Binding Puesto}"></Label>
+                                </StackLayout>
+                                <Label TextColor="Black" Text="{Binding Nombre}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

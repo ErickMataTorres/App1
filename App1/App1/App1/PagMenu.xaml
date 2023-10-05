@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrls="clr-namespace:App1.controles"
+             Padding="10"
+             x:Class="App1.PagMenu">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblEmpresa" Text="" />
+            <ctrls:Boton x:Name="btnEmpleados" Image="empleados" Text="Empleados" />
+            <ctrls:Boton x:Name="btnConceptos" Image="conceptos" Text="Conceptos" />
+            <ctrls:Boton x:Name="btnNomina" Text="Nomina" />
+            <Label Text=""/>
+            <ctrls:Boton x:Name="btnLogout" Text="Cerrar sesion"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
